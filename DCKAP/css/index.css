@@ -1,0 +1,487 @@
+body {
+      font-family: 'Poppins', sans-serif;
+    position: relative;
+    color: #000;
+    margin-top: 69px;
+    background-color: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+*,
+:focus {
+    outline: 0
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom
+}
+
+a {
+    color: #272b3f;
+    text-decoration: none;
+    display: inline-block
+}
+
+a:focus,
+a:hover {
+    text-decoration: none
+}
+
+
+
+ul {
+    list-style-type: none;
+}
+ul , p , h1 , h2 , h3 ,h4 , h5 , h6{
+    margin-bottom: 0px;
+}
+
+.container {
+    margin: 0 auto;
+    position: relative
+}
+
+@media only screen and (max-width: 992px) {
+    .container {
+        padding: 0 12px
+    }
+}
+
+@media(min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    border-radius: 20px
+}
+
+::-webkit-scrollbar-button {
+    display: none
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ccc
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #ccc
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2f1dac
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2f1dac
+}
+
+::-webkit-scrollbar-corner {
+    display: none
+}
+
+::-webkit-resizer {
+    display: none
+}
+
+.list-inline {
+    padding: 0;
+    font-size: 0;
+    list-style-type: none
+}
+
+.list-inline>li {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px 16px
+}
+
+.text-right {
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+
+}
+.gobal-button {
+    position: relative;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.gobal-button:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    right: 0px;
+    z-index: -1;
+    height: 100%;
+    margin: 0px auto;
+    transition: 0.5s;
+    border-radius: 2px;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    background-color: #067b78;
+}
+
+.gobal-button:hover:after {
+    width: 100%
+}
+#overlay {
+    position: absolute;
+    top: -70px;
+    bottom: 0;
+    background: #10c9c3;
+    width: 100%;
+    height: 100%;
+    opacity: 0.87;
+    display: none;
+    z-index: 9;
+    transition: all 1s ease;
+}
+
+#overlay.active {
+    display: block;
+}
+
+.scrollbar {
+    width: 40px;
+    height: 40px;
+    background-color: #10c9c3;
+    position: fixed;
+    right: -50px;
+    bottom: 10%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 999999999;
+    transition: 0.5s;
+}
+
+.scroll-open {
+    right: 20px;
+    opacity: 1;
+}
+
+.scrollbar:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    padding: 7px;
+    border: solid white;
+    margin: -4px 13px;
+    transform: rotate(45deg);
+    border-width: 1px 0px 0px 1px;
+}
+
+.scrollbar:hover {
+    background-color:#10c9c3;
+}
+
+
+
+/**********Header**********************/
+header{
+        box-shadow: 0 2px 10px 0 rgb(0 0 0 / 11%);
+    -webkit-box-shadow: 0 2px 10px 0 rgb(0 0 0 / 11%);
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    background-color: #fff;
+    z-index: 99;
+    margin: 0px auto;
+    top: 0;
+
+}
+.dc-headCount{
+    position: relative;
+    font-size:0px;
+}
+.dc-logo , .dc-navMenu{
+    display: inline-block;
+    font-size: 14px;
+    width: 50%;
+}
+.dc-navMenu >ul >li >a{
+    display: block;
+    padding: 24px 8px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.dc-navMenu >ul >li >a.active{
+    color: #10c9c3;
+}
+.dc-mobIc{
+    display: none!important;
+}
+.dc-navMenu >ul >li >a:hover{
+    color: #10c9c3;
+}
+#dc-banner{
+    position: relative;
+}
+.dc-bannerCont{
+   position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    transform: translateY(-50%);
+}
+.dc-bannerCont >h1{
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+.dc-bannerCont >p {
+    font-size: 16px;
+}
+.dc-bannerCont >p >span{
+    display: block;
+}
+.dc-bannerimg >p >img{
+    width: 100%;
+    display: block;
+}
+
+.dc-stats{
+    position: relative;
+    background-color: #10c9c3;
+    padding:72px 0;
+}
+.dc-statsCont >li{
+    position: relative;
+    width: 25%;
+}
+.dc-statsBox{
+    position: relative;
+    font-size: 0px;
+}
+.dc-sImg , .dc-sCont{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    width: 25%;
+}
+.dc-sImg  >img{
+    max-width: 100%;
+    display: block;
+     padding-right: 16px;
+}
+.dc-sCont{
+    width: 75%;
+   color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.dc-sCont >p >strong{
+    display: block;
+    
+    font-size: 24px;
+}
+#dc-Abouts{
+    background-color: #f6f6f6;
+}
+.dc-aboutList >li{
+    width: 50%;
+}
+.dc-hbListCont >h2{
+    position: relative;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+.dc-hbListCont >p{
+    font-size: 16px;
+    color: #545454;
+}
+.dc-hbListCont{
+    margin-right: 40px;
+}
+.dc-hbListCont >p+p{
+    margin-top: 24px;
+}
+.dc-sig {
+    display: block;
+    margin-top: 60px;
+}
+.dc-letsg{
+    width: 180px;
+    height:48px;
+    line-height: 48px;
+    background-color: #10c9c3;
+    position: relative;
+   color: #fff;
+   display: block;
+   margin:0px auto;
+    text-align: center;
+}
+.hb-ndHelp{
+    text-align: center;
+    margin:72px 0;
+}
+.hb-ndHelp  >h3{
+    font-size: 32px;
+
+}
+.hb-ndHelp >p{
+    font-size: 16px;
+    color: #545454;
+    margin:32px auto 60px;
+}
+.hb-ndHelp >p >span{
+    display: block;
+}
+
+.footer_bg{
+    background-color: #000;
+    padding: 54px 0 70px;
+    color: #fff;
+}
+.dc-footerList >li:first-child{
+    width: 30%;
+    vertical-align: top;
+    text-align: left;
+}
+.dc-footerList >li:nth-child(2){
+    width: 22%;
+}
+.dc-footerList >li{
+    width: 16%;
+    color: #ccc;
+    vertical-align: top;
+ 
+}
+.dc-footerList >li >ul >li>span{
+    display: block;
+}
+.dc-footerList >li >ul >li >a{
+    color: #ccc;
+    padding: 4px 8px;
+    font-size: 16px;
+}
+.dc-lo{
+    font-size: 22px!important;
+    margin-bottom: 20px;
+    display: block;
+    padding: 0px!important;
+    color: #fff!important
+}
+
+
+@media (max-width:767px){
+    .dc-footerList >li:first-child , .dc-footerList >li:nth-child(2){
+        width: 100%;
+    }
+    .dc-footerList >li >ul >li >a{
+        padding: 6px 0px;
+    }
+    .dc-footerList >li{
+        width: 50%;
+        margin:6px auto;
+    }
+    .footer_bg{
+        padding: 24px 0;
+    }
+    .hb-ndHelp >h3 , .dc-hbListCont >h2 , .dc-bannerCont >h1{
+        font-size: 24px;
+    }
+    .dc-hbListCont >p , .dc-bannerCont >p{
+        font-size: 14px;
+    }
+    .dc-bannerCont >p{
+        padding: 0px 12px;
+    }
+    .hb-ndHelp , .hb-ndHelp >p , .dc-sig{
+        margin:24px auto;
+    }
+    .dc-aboutList >li{
+        width: 100%;
+        margin:24px auto;
+    }
+    .dc-statsCont >li{
+        width: 100%;
+        margin: 10px auto
+    }
+    .dc-hbListCont{
+        margin-right: 0px;
+    }
+    .dc-stats{
+        padding: 24px 0;
+    }
+    .dc-navMenu{
+           position: fixed;
+        height: 100%;
+        width: 250px;
+        top: 0;
+        left: -400px;
+        transition: 0.5s;
+        background: #fff;
+        z-index: 99999;
+        padding: 0px!important
+    }
+    .dc-navMenu.open{
+        left: 0px;
+    }
+    .dc-navMenu >ul >li{
+        position: relative;
+    display: block;
+    text-align: left;
+    padding: 0px;
+    }
+     .dc-navMenu >ul >li >a{
+        position: relative;
+        display: block;
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid #ccc;
+    }
+    .dc-mobIc{
+        display: inline-block!important;
+        width: 50%;
+    }
+    .dc-bannerimg >p >img{
+        height: 300px; /*i  have no mobile banner so i am using height for mobile view else if i have mobile logo iam using picture tag*/
+    }
+    .mobile-view-btn {
+   
+    border: none;
+    color: #10c9c3;
+    background-color: #fff;
+}
+    .dc-bannerCont >p >span{
+        display: initial;
+    }
+    .dc-header{
+        padding: 22px 0
+    }
+
+}
